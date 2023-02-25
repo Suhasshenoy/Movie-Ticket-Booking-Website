@@ -23,7 +23,7 @@ On successful payment, user gets a ticket in the form of qr code to his email id
 
 <br />
 <br />
-
+Synopsis, srs, er-diagram, relational diagram, data flow diagrams are available in the documentation folder. MongoDB is used to store images of movies and reviews posted by user. <br /> <br />
 
 Feel free to fork and contribute to the project. <br /> <br />
 Feature that can be added <br />
