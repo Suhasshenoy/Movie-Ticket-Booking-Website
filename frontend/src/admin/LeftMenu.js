@@ -52,6 +52,13 @@ const LeftMenu = ({history}) => {
                 </Link>
             </li>
         </div>
+        <div className="row nav">
+            <li className="nav-item">
+                <Link className='nav-link' style = {currentTab(history,"/admin/analyze/movie")} to = "/admin/analyze/movie">
+                    Analyze Reviews
+                </Link>
+            </li>
+        </div>
         
     </div>
     );

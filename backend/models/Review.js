@@ -22,6 +22,10 @@ const reviewSchema = new mongoose.Schema({
     movie_id : {
         type: Number,
         required: true
+    },
+    score:{
+        type: Number,
+        required: true
     }
 },
 {timestamps:true}

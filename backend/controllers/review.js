@@ -1,5 +1,7 @@
 const Review = require("../models/Review");
 const User = require("../models/User");
+var Sentiment = require('sentiment');
+var sentiment = new Sentiment();
 
 exports.postReview = async (req,res) => {
     const {title, description} = req.body;
@@ -10,7 +12,8 @@ exports.postReview = async (req,res) => {
         let [result, a] = await User.findById(user_id);
         let user = result[0];
         console.log(user);
-        let review = new Review({title,description,user_id, name:user.name ,movie_id});
+        let {comparative} = sentiment.analyze(description);
+        let review = new Review({title,description,user_id, name:user.name ,movie_id,score:comparative});
             review.save((err,review) => {
             if(err){
                 throw err;

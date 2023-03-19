@@ -16,6 +16,7 @@ import Reviews from './user/Reviews';
 import AddReview from './user/AddReview';
 import SeatsForShow from './user/SeatsForShow.';
 import BookingSuccess from './core/BookingSuccess';
+import ReviewAnalysis from './admin/ReviewAnalysis';
 
 
 const Routes = () => {
@@ -26,6 +27,7 @@ const Routes = () => {
                 <Route path = "/signup" exact component={Signup}  />
                 <Route path = "/signin" exact component={Signin}  />
                 <Route path = "/movie" exact component={Movie}  />
+
 
                 <PrivateRoute path = "/movie/:movieId" exact component={Movie} />
                 <PrivateRoute path = "/reviews/:movieId" exact component={Reviews} />
@@ -43,6 +45,8 @@ const Routes = () => {
                 <AdminRoute path = "/admin/add/screen" exact component={AddScreen} />
                 <AdminRoute path = "/admin/add/show" exact component={AddShow} />
                 <AdminRoute path = "/admin/delete/movie" exact component={DeleteMovie} />
+                <AdminRoute path = "/admin/analyze/movie" exact component={ReviewAnalysis} />
+
                 
 
             </Switch>
